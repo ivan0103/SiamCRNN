@@ -92,8 +92,8 @@ class Trainer(object):
     def validation(self):
         print('---------starting evaluation-----------')
         self.evaluator.reset()
-        dataset_path = '/content/drive/MyDrive/Colab Notebooks/Levir-CD/testing'
-        with open('/content/drive/MyDrive/Colab Notebooks/Levir-CD/test.txt', "r") as f:
+        dataset_path = '/content/drive/MyDrive/Colab Notebooks/CCD/testing'
+        with open('/content/drive/MyDrive/Colab Notebooks/CCD/test.txt', "r") as f:
             # data_name_list = f.read()
             data_name_list = [data_name.strip() for data_name in f]
         data_name_list = data_name_list
@@ -138,10 +138,10 @@ def main():
     parser = argparse.ArgumentParser(description="Training on OEM_OSM dataset")
     parser.add_argument('--dataset', type=str, default='OSCD_3Bands')
     parser.add_argument('--dataset_path', type=str,
-                        default='/content/drive/MyDrive/Colab Notebooks/Levir-CD/train.txt')
+                        default='/content/drive/MyDrive/Colab Notebooks/CCD/train.txt')
     parser.add_argument('--type', type=str, default='train')
     parser.add_argument('--train_data_list_path', type=str,
-                        default='/content/drive/MyDrive/Colab Notebooks/Levir-CD/train.txt')
+                        default='/content/drive/MyDrive/Colab Notebooks/CDD/train.txt')
     parser.add_argument('--shuffle', type=bool, default=True)
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--data_name_list', type=list)
