@@ -138,7 +138,7 @@ def main():
     parser = argparse.ArgumentParser(description="Training on OEM_OSM dataset")
     parser.add_argument('--dataset', type=str, default='OSCD_3Bands')
     parser.add_argument('--dataset_path', type=str,
-                        default='/content/drive/MyDrive/Colab Notebooks/Levir-CD/train.txt')
+                        default='/content/drive/MyDrive/Colab Notebooks/Levir-CD/training')
     parser.add_argument('--type', type=str, default='train')
     parser.add_argument('--train_data_list_path', type=str,
                         default='/content/drive/MyDrive/Colab Notebooks/Levir-CD/train.txt')
