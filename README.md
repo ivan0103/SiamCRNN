@@ -1,61 +1,67 @@
-<h1 align="center">Change Detection in Multisource VHR Images via Deep Siamese Convolutional Multiple-Layers Recurrent Neural Network</h1>
-
-<h3 align="center"> <a href="https://chrx97.com/">Hongruixuan Chen</a>, <a href="https://scholar.google.com/citations?user=DbTt_CcAAAAJ&hl=zh-CN">Chen Wu</a>, <a href="https://scholar.google.com/citations?user=Shy1gnMAAAAJ&hl=zh-CN">Bo Du</a>,
-<a href="https://scholar.google.com/citations?user=vzj2hcYAAAAJ&hl=en">Liangpei Zhang</a>, and <a href="https://scholar.google.com/citations?hl=en&user=AvOyKAUAAAAJ">Le Wang</a></h3>
-
-This is an official implementation of **SiamCRNN** framework in our IEEE TGRS 2020 paper: [Change Detection in Multisource VHR Images via Deep Siamese Convolutional Multiple-Layers Recurrent Neural Network](https://ieeexplore.ieee.org/document/8937755).
-
-
-## Note
-**2024.01.18**
-- Wanna go beyond the patch-wise detection pipeline and apply SiamCRNN to large-scale change detection datasets? We have updated the [fully convolutional version of SiamCRNN](https://github.com/ChenHongruixuan/SiamCRNN/tree/master/FCN_version). Please feel free to test on the benchmark dataset.
-
-**2023.04.25**
-- The datasets Wuhan and Hanyang used in our paper have been open-sourced! You can download them [here](http://sigma.whu.edu.cn/resource.php).   
-
-
-
-## Abstract
-> With the rapid development of Earth observation technology, very-high-resolution (VHR) images from various satellite sensors are more available, which greatly enrich the data source of change detection (CD). Multisource multitemporal images can provide abundant information on observed landscapes with various physical and material views, and it is exigent to develop efficient techniques to utilize these multisource data for CD. In this article, we propose a novel and general deep siamese convolutional multiple-layers recurrent neural network (RNN) (SiamCRNN) for CD in multitemporal VHR images. Superior to most VHR image CD methods, SiamCRNN can be used for both homogeneous and heterogeneous images. Integrating the merits of both convolutional neural network (CNN) and RNN, Siam-CRNN consists of three subnetworks: deep siamese convolutional neural network (DSCNN), multiple-layers RNN (MRNN), and fully connected (FC) layers. The DSCNN has a flexible structure for multisource image and is able to extract spatial–spectral features from homogeneous or heterogeneous VHR image patches. The MRNN stacked by long-short term memory (LSTM) units is responsible for mapping the spatial–spectral features extracted by DSCNN into a new latent feature space and mining the change information between them. In addition, FC, the last part of SiamCRNN, is adopted to predict change probability. The experimental results in two homogeneous data sets and one challenging heterogeneous VHR images data set demonstrate that the promising performances of the proposed network outperform several state-of-the-art approaches.
-
-## Network architecture
-<img src="./Fig/SiamCRNN.jpg" width="100%" height="100%">
-
-
-
-## Requirements
-```
-tensorflow_gpu==1.9.0
-opencv==3.4.0
-numpy==1.14.0
-```
-
-## Dataset
-Two homogeneous datasets, Wuhan and Hanyang, and one heterogeneous dataset, Buffalo, are used in our work. The Wuhan and Hanyang datasets can be downloaded [here](http://sigma.whu.edu.cn/resource.php). For the Buffalo dataset, please request distribution from Prof. [Chen Wu](mailto:chen.wu@whu.edu.cn).
-<center>
-
-|  Dataset  |  Pre-event image  |  Post-event image  | Reference Image  |
-|  :----:  |  :----:  | :----:  | :----:  |
-| Wuhan  | <img src="./Fig/WH_1.png" width=250px>  | <img src="./Fig/WH_2.png" width=250px>  | <img src="./Fig/WH_GT.png" width=250px> |
-| Hanyang  | <img src="./Fig/HY_1.png" width=250px>  | <img src="./Fig/HY_2.png" width=250px>  | <img src="./Fig/HY_GT.png" width=250> |
-| Buffalo  | <img src="./Fig/Buffalo_T1.png" width=250px>  | <img src="./Fig/Buffalo_T2.png" width=250px>  | <img src="./Fig/Buffalo_GT.bmp" width=250px> |
-
-</center>
-
-## Citation
-If this code or dataset contributes to your research, please consider citing our paper. We appreciate your support!🙂
-```
-@article{Chen2020Change,
-author = {Chen, Hongruixuan and Wu, Chen and Du, Bo and Zhang, Liangpei and Wang, Le},
-issn = {0196-2892},
-journal = {IEEE Transactions on Geoscience and Remote Sensing},
-number = {4},
-pages = {2848--2864},
-title = {{Change Detection in Multisource VHR Images via Deep Siamese Convolutional Multiple-Layers Recurrent Neural Network}},
-volume = {58},
-year = {2020}
-}
-```
-
-## Q & A
-**For any questions, please [contact us.](mailto:Qschrx@gmail.com)**
+<h1 align="center">Urban Change Detection Based on Remote Sensing Data</h1>
+    <h2 align="center">How are Recurrent Neural Networks applied in the context of urban change detection?</h2>
+    <h3 align="center"> This is an implementation of <strong>SiamCRNN</strong> framework forked from this official 
+        <a href="https://github.com/ChenHongruixuan/SiamCRNN">repository</a>
+    </h3>
+    <h2>Description</h2>
+    <p>
+        This repository is part of my research, in collaboration with TU Delft and Gate Institute on "How are Recurrent Neural Networks applied in the context of urban change detection?". This repository has been forked, updated and modified. The model has been trained and evaluated on 4 different datasets - Levir, DSIFN, CDD and OSCD. The repository contains 4 additional branches for the implementation for each of these datasets. The branches have been updated so that they work inside a Google Colab environment with the dataset downloaded separately, modified with a script, and then added to the Google Colab environment through Google Drive.
+    </p>
+    <h2>Datasets</h2>
+    <p>The model has been trained and evaluated on four different datasets:</p>
+    <ul>
+        <li>Levir-CD</li>
+        <li>DSIFN</li>
+        <li>CDD</li>
+        <li>OSCD</li>
+    </ul>
+    <h2>Branches</h2>
+    <p>The repository contains four branches, each dedicated to one of the datasets:</p>
+    <ul>
+        <li><strong>Levir-CD</strong>: For the Levir Change Detection dataset.</li>
+        <li><strong>DSIFN</strong>: For the DSIFN dataset.</li>
+        <li><strong>CDD</strong>: For the Change Detection Dataset.</li>
+        <li><strong>OSCD</strong>: For the OSCD dataset.</li>
+    </ul>
+    <h2>Getting Started</h2>
+    <h3>Prerequisites</h3>
+    <ul>
+        <li>Python 3.7+</li>
+        <li>PyTorch</li>
+        <li>Google Colab account (for running the model in the cloud)</li>
+    </ul>
+    <h3>Running in Google Colab</h3>
+    <ol>
+        <li><strong>Download the Dataset</strong>
+            <p>Download the CCD dataset.</p>
+        </li>
+        <li><strong>Clone the Repository</strong>
+            <pre><code>git clone https://github.com/yourusername/SiamCRNN.git
+cd SiamCRNN</code></pre>
+        </li>
+        <li><strong>Switch to the Desired Branch</strong>
+            <pre><code>git checkout CCD</code></pre>
+        </li>
+        <li><strong>Run Setup Script</strong>
+            <p>Navigate to the script directory and modify the paths in <code>files.sh</code> if necessary:</p>
+            <pre><code>cd FCN_version/script/
+chmod +x files.sh
+./files.sh</code></pre>
+        </li>
+        <li><strong>Upload Modified Dataset</strong>
+            <p>Upload the modified dataset to your Google Drive in the following folder: MyDrive/Colab Notebooks</p>
+        </li>
+        <li><strong>Open Google Colab</strong>
+            <p>Open the <code>GoogleColab.ipynb</code> file in Google Colab.</p>
+        </li>
+        <li><strong>Run the Notebook</strong>
+            <p>Follow the instructions in the notebook to set up the environment and run the training and evaluation.</p>
+        </li>
+    </ol>
+    <h2>Acknowledgments</h2>
+    <ul>
+        <li>TU Delft</li>
+        <li>Gate Institute</li>
+        <li>Authors of the <a href="https://github.com/ChenHongruixuan/SiamCRNN">original SiamCRNN repository</a></li>
+    </ul>
+    <p>For more detailed information on the research and implementation, please refer to the original paper and the documentation provided in this repository.</p>
