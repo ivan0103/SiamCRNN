@@ -72,8 +72,10 @@ class OSCDDatset3Bands(Dataset):
         label_path = os.path.join(self.dataset_path, self.data_list[index], 'cm', 'cm.png')
         pre_img = self.loader(pre_path)
         post_img = self.loader(post_path)
-        pre_img = np.array(Image.fromarray(pre_img).resize((256, 256, 3), Image.BICUBIC))
-        post_img = np.array(Image.fromarray(post_img).resize((256, 256, 3), Image.BICUBIC))    
+        # Convert to uint8 and resize
+        pre_img = np.array(Image.fromarray(pre_img.astype(np.uint8)).resize((256, 256), Image.BICUBIC))
+        post_img = np.array(Image.fromarray(post_img.astype(np.uint8)).resize((256, 256), Image.BICUBIC))    
+   
         label = self.loader(label_path)
 
         if len(label.shape) > 2:
